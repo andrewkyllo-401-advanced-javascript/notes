@@ -1,0 +1,28 @@
+{
+  "name": "add-note",
+  "version": "1.0.0",
+  "description": "- [submission PR](http://xyz.com)\r - [ci/cd](http://xyz.com) (GitHub Actions)\r - [back-end server url](http://xyz.com) (when applicable)\r - [front-end application](http://xyz.com) (when applicable)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "is-url": "^1.2.4",
+    "jest": "^25.1.0",
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewkyllo-401-advanced-javascript/notes.git"
+  },
+  "author": "andrew kyllo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewkyllo-401-advanced-javascript/notes/issues"
+  },
+  "homepage": "https://github.com/andrewkyllo-401-advanced-javascript/notes#readme"
+}
