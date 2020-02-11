@@ -3,8 +3,10 @@
 const Input = require('./lib/input.js');
 const Notes = require('./lib/notes.js');
 
-const options = new Input();
-options.valid() ? Notes.add(options) : help();
+const input = new Input();
+const notes = new Notes(input);
+
+input.valid() ? notes.execute(notes) : help();
 
 function help() {
   console.log('help');
