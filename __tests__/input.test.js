@@ -27,4 +27,29 @@ describe('Input module', () => {
     options.command = {};
     expect(options.valid()).toBeFalsy();
   });
+
+  it ('valid() rejects an improperly formed input', () => {
+    const options = new Input();
+    options.command = 'This is not an object';
+    expect(options.valid()).toBeFalsy();
+  });
+
+  it ('valid() rejects an improperly formed input', () => {
+    const options = new Input();
+    options.command = {a: 'missing payload'};
+    expect(options.valid()).toBeFalsy();
+  }); 
+  
+  it ('valid() rejects an improperly formed input', () => {
+    const options = new Input();
+    options.command = {p: 'mising action'};
+    expect(options.valid()).toBeFalsy();
+  });
+  
+  it ('valid() rejects an improperly formed input', () => {
+    const options = new Input();
+    options.command = {p: 2};
+    expect(options.valid()).toBeFalsy();
+  });
+
 });
