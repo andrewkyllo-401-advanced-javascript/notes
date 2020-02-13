@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "is-url": "^1.2.4",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0",
+    "mongoose": "^5.8.11"
   },
   "devDependencies": {
     "jest": "^25.1.0"
