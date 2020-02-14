@@ -15,7 +15,6 @@ const input = new Input();
 const notes = new Notes();
 
 if (input.valid()) {
-  console.log(input);
   notes.execute(input)
     .then(data => {mongoose.disconnect()})
     .catch(error => {console.error(error)})
