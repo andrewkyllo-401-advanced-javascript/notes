@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const notesSchema = mongoose.Schema({
-  category: { type: String, required: true},
+  category: { type: String, required: false},
   text: { type: String, required: true}
 });
 
