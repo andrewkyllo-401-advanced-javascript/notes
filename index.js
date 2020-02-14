@@ -5,7 +5,7 @@ const Notes = require('./lib/notes.js');
 const mongoose = require('mongoose');
 
 
-const MONGOOSE_URI = 'mongodb://localhost:27017/notes';
+const MONGOOSE_URI = 'mongodb://localhost:27017/notesy';
 mongoose.connect(MONGOOSE_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -14,10 +14,14 @@ mongoose.connect(MONGOOSE_URI, {
 const input = new Input();
 const notes = new Notes();
 
-input.valid() ? notes.execute(input).then(data => {mongoose.disconnect()}).catch(error => {console.error(error)}) 
-  : help();
-
-
+if (input.valid()) {
+  console.log(input);
+  notes.execute(input)
+    .then(data => {mongoose.disconnect()})
+    .catch(error => {console.error(error)})
+} else {
+  help();
+}
 
 
 function help() {
